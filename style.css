@@ -2055,6 +2055,14 @@ body {
     overflow: visible;
 }
 
+.poster-card-two-item:focus-visible,
+.book-cover-card:focus-visible,
+.brand-mockup-card:focus-visible,
+.social-design-card:focus-visible {
+    outline: 3px solid #2563EB;
+    outline-offset: 4px;
+}
+
 
 .poster-lightbox {
 
@@ -2503,7 +2511,7 @@ body {
 
         grid-template-columns: 1fr 1fr;
 
-        grid-template-rows: auto auto auto;
+        grid-template-rows: auto repeat(4, auto);
 
         gap: 25px 15px;
     }
@@ -2587,6 +2595,42 @@ body {
         transform: translateY(20px);
     }
 
+    .poster-nine {
+
+        grid-column: 1;
+
+        grid-row: 4;
+
+        transform: none;
+    }
+
+    .poster-ten {
+
+        grid-column: 2;
+
+        grid-row: 4;
+
+        transform: translateY(20px);
+    }
+
+    .poster-eleven {
+
+        grid-column: 1;
+
+        grid-row: 5;
+
+        transform: none;
+    }
+
+    .poster-twelve {
+
+        grid-column: 2;
+
+        grid-row: 5;
+
+        transform: translateY(20px);
+    }
+
 
     /* Keep every image portrait */
 
@@ -2621,7 +2665,9 @@ body {
 
     .poster-collage-two {
 
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
+
+        grid-template-rows: auto repeat(8, auto);
 
     }
 
@@ -2637,7 +2683,11 @@ body {
     .poster-five,
     .poster-six,
     .poster-seven,
-    .poster-eight {
+    .poster-eight,
+    .poster-nine,
+    .poster-ten,
+    .poster-eleven,
+    .poster-twelve {
 
         grid-column: 1;
 
@@ -2671,6 +2721,34 @@ body {
     .poster-eight {
 
         grid-row: 5;
+
+        transform: none;
+    }
+
+    .poster-nine {
+
+        grid-row: 6;
+
+        transform: none;
+    }
+
+    .poster-ten {
+
+        grid-row: 7;
+
+        transform: none;
+    }
+
+    .poster-eleven {
+
+        grid-row: 8;
+
+        transform: none;
+    }
+
+    .poster-twelve {
+
+        grid-row: 9;
 
         transform: none;
     }
